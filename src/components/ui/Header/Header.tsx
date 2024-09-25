@@ -73,6 +73,11 @@ export const Header = () => {
             {isLogin ? (
               <>
                 <li>
+                  <Link href="/mypage" onClick={handleLinkClick}>
+                    マイページ
+                  </Link>
+                </li>
+                <li>
                   <Button
                     label="ログアウト"
                     onClick={handleLogoutClick}

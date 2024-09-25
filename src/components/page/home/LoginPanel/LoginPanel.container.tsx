@@ -30,13 +30,12 @@ export const LoginPanelContainer = () => {
         data.password
       );
       const user = userCredential.user;
-      console.log("User logged in:", user);
-
-      // ユーザーデータを取得
-      // const userData = await fetchUserData(user.uid);
-      // console.log('Fetched user data:', userData);
     } catch (error) {
-      console.error("Error logging in:", error);
+      if (error instanceof Error) {
+        alert(error.message);
+      } else {
+        alert("ログインに失敗しました");
+      }
     }
   };
 
@@ -58,7 +57,7 @@ export const LoginPanelContainer = () => {
               },
               pattern: {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                message: "8桁の数字のみ入力してください。",
+                message: "メールアドレスを入力してください",
               },
             })}
             width="l"
@@ -79,8 +78,7 @@ export const LoginPanelContainer = () => {
               },
               pattern: {
                 value: /^(?=.*[a-zA-Z])(?=.*\d).{8,32}$/,
-                message:
-                  "8文字以上、32文字以下の少なくとも1つ以上の半角英字と数字をもつパスワードを入力してください。",
+                message: "設定したパスワードを入力してください。",
               },
             })}
             width="l"
