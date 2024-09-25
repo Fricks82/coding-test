@@ -1,2 +1,13 @@
+.loginContent {
+  height: calc(100vh - 48px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeContent {
+  min-height: calc(100vh - 48px);
+}
+
 @media (max-width: 768px) {
 }

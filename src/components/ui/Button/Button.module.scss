@@ -1,0 +1,35 @@
+.button {
+  padding: 8px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  &[data-width="s"] {
+    width: 120px;
+  }
+  &[data-width="m"] {
+    width: 240px;
+  }
+  &[data-width="l"] {
+    width: 360px;
+  }
+  &[data-variant="strong"] {
+    border-color: #113b8d;
+    background-color: #2859ba;
+    color: #fff;
+    &:disabled {
+      border-color: #eee;
+    }
+  }
+  &:hover {
+    opacity: 0.9;
+  }
+  &:disabled {
+    background: #ccc;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 768px) {
+}

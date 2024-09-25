@@ -1,11 +1,11 @@
-import { Header } from '@/components/ui/Header';
-import './globals.css';
+import { Header } from "@/components/ui/Header/Header";
+import "./globals.css";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang='ja'>
+    <html lang="ja">
       <body>
-        <div className='wrapper'>
+        <div className="wrapper">
           <Header />
           {children}
         </div>
