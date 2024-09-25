@@ -81,7 +81,7 @@ export const RegisterPanelContainer = () => {
       await setDoc(doc(db, "users", user.uid), {
         userName: data.userName,
         email: data.email,
-        birthday: data.birthDay,
+        birthDay: data.birthDay,
         gender: data.gender,
         avatar: avatarURL,
         createdAt: new Date(), // 作成日
