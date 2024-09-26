@@ -1,4 +1,4 @@
-import { fetchUserData } from "@/app/utils/auth";
+import { fetchUserData } from "@/utils/auth";
 import { auth } from "@/lib/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { DocumentData } from "firebase/firestore";
@@ -11,22 +11,22 @@ import Image from "next/image";
 export const MyPageDateList = () => {
   /** 未ログイン時リダイレクト用のルーター */
   const router = useRouter();
-
+  /** ログインユーザー情報 */
+  const user = auth.currentUser;
+  /** ログインユーザーの登録データ */
   const [userData, setUserData] = useState<DocumentData | null | undefined>(
     null
   );
 
   /** ページアクセス時にユーザー状態を取得 */
   useEffect(() => {
-    onAuthStateChanged(auth, async (user) => {
+    (async () => {
       if (user) {
         const uid = user.uid;
         setUserData(await fetchUserData(uid));
-      } else {
-        router.push("/");
       }
-    });
-  }, [auth]);
+    })();
+  }, [user]);
 
   return (
     <table className={styles.dataTable}>
@@ -43,7 +43,7 @@ export const MyPageDateList = () => {
           <tr>
             <th>アイコン画像</th>
             <td>
-              <div className={styles.iconImage}>
+              <div className={styles.avatar}>
                 <Image
                   src={userData.avatar}
                   layout="fill"
