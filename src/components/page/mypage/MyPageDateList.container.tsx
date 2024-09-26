@@ -45,8 +45,11 @@ export const MyPageDateList = () => {
               <div className={styles.avatar}>
                 <Image
                   src={userData.avatar}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  sizes="50vw"
+                  style={{
+                    objectFit: "cover",
+                  }}
                   alt=""
                 />
               </div>

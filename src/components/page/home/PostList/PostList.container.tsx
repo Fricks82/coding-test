@@ -71,7 +71,15 @@ export const PostListContainer = () => {
       {posts.map((post) => (
         <div key={post.id} className={styles.item}>
           <div className={styles.avatar}>
-            <Image src={post.avatar} layout="fill" objectFit="cover" alt="" />
+            <Image
+              src={post.avatar}
+              fill
+              sizes="50vw"
+              style={{
+                objectFit: "cover",
+              }}
+              alt=""
+            />
           </div>
           <div className={styles.box}>
             <p className={styles.username}>{post.userName}</p>
