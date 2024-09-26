@@ -1,6 +1,5 @@
 import { fetchUserData } from "@/utils/auth";
 import { auth } from "@/lib/firebase";
-import { onAuthStateChanged } from "firebase/auth";
 import { DocumentData } from "firebase/firestore";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -47,7 +46,7 @@ export const MyPageDateList = () => {
                 <Image
                   src={userData.avatar}
                   layout="fill"
-                  objectFit="contain"
+                  objectFit="cover"
                   alt=""
                 />
               </div>

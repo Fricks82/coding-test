@@ -3,7 +3,6 @@
 import { auth } from "@/lib/firebase";
 import styles from "./page.module.scss";
 import { onAuthStateChanged } from "firebase/auth";
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { LoginPanelContainer } from "@/components/page/home/LoginPanel";
 import { PostFormContainer } from "@/components/page/home/PostForm";

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styles from "./RegisterPanel.module.scss";
 import { Button } from "@/components/ui/Button/Button";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -12,6 +11,7 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
+/** 新規登録フォームの型 */
 type FormData = {
   userName: string;
   email: string;

@@ -1,12 +1,12 @@
 import Link from "next/link";
 import styles from "./LoginPanel.module.scss";
 import { Button } from "@/components/ui/Button/Button";
-import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { InputText } from "@/components/ui/InputText";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { doc, getDoc } from "firebase/firestore";
 import { auth } from "@/lib/firebase";
 
+/** ログインフォームの型 */
 type FormData = {
   email: string;
   password: string;
@@ -14,6 +14,7 @@ type FormData = {
 
 /** アクセスした際に未ログイン時に表示するログイン用のパネル */
 export const LoginPanelContainer = () => {
+  /** RHFの定義 */
   const {
     register,
     handleSubmit,
@@ -22,6 +23,7 @@ export const LoginPanelContainer = () => {
     reValidateMode: "onSubmit",
   });
 
+  /** ログイン処理 */
   const handleOnSubmit: SubmitHandler<FormData> = async (data: FormData) => {
     try {
       const userCredential = await signInWithEmailAndPassword(

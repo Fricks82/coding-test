@@ -32,4 +32,15 @@
 }
 
 @media (max-width: 768px) {
+  .button {
+    &[data-width="s"] {
+      width: 40%;
+    }
+    &[data-width="m"] {
+      width: 60%;
+    }
+    &[data-width="l"] {
+      width: 100%;
+    }
+  }
 }

@@ -27,29 +27,28 @@
 
 .box {
   flex: 1;
-}
+  .username {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
 
-.username {
-  font-size: 1.4rem;
-  font-weight: bold;
-}
+  .text {
+    margin-top: 4px;
+    font-size: 1.2rem;
+    white-space: pre-wrap;
+  }
 
-.text {
-  margin-top: 4px;
-  font-size: 1.2rem;
-  white-space: pre-wrap;
-}
+  .createdAt {
+    font-size: 1rem;
+  }
 
-.createdAt {
-  font-size: 1rem;
-}
-
-.deleteButton {
-  display: block;
-  margin: 8px 0 0 auto;
-  padding: 4px;
-  width: 40px;
-  font-size: 1.2rem;
+  .deleteButton {
+    display: block;
+    margin: 8px 0 0 auto;
+    padding: 4px;
+    width: 40px;
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 768px) {
