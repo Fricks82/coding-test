@@ -1,4 +1,4 @@
-.input {
+.textarea {
   padding: 8px;
   font-size: 1.6rem;
   border: 1px solid #ccc;
@@ -16,7 +16,7 @@
 }
 
 @media (max-width: 768px) {
-  .input {
+  .textarea {
     &[data-width="s"] {
       width: 40%;
     }

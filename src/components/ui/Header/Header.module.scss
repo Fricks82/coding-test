@@ -5,14 +5,18 @@
   padding: 8px;
   width: 100%;
   height: 48px;
-  background-color: rgb(116, 186, 216);
+  background-color: #71b8d2;
+  z-index: 999;
 }
 
 .title {
   font-size: 2.4rem;
   font-weight: 500;
   line-height: 32px;
-  color: #fff;
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
 .burger {

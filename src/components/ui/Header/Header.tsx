@@ -56,7 +56,9 @@ export const Header = () => {
 
   return (
     <div className={styles.header}>
-      <h1 className={styles.title}>CodingTest App</h1>
+      <h1 className={styles.title}>
+        <Link href="/">CodingTest App</Link>
+      </h1>
       <div onClick={handleClick} data-expand={isOpen} className={styles.burger}>
         <span />
         <span />

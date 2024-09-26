@@ -6,6 +6,8 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { LoginPanelContainer } from "@/components/page/home/LoginPanel";
+import { PostFormContainer } from "@/components/page/home/PostForm";
+import { PostListContainer } from "@/components/page/home/PostList";
 
 /** 初期表示のホーム画面 */
 const Home = () => {
@@ -18,10 +20,9 @@ const Home = () => {
       if (user) {
         // ログイン中
         const uid = user.uid;
-        console.log(uid);
         setIsLogin(true);
       } else {
-        // 未ログイン状態
+        // 未ログイン
         setIsLogin(false);
       }
     });
@@ -30,9 +31,14 @@ const Home = () => {
   return (
     <>
       {isLogin ? (
-        <div className={styles.homeContent}>Home</div>
+        // ログイン中は投稿一覧表示
+        <div className={styles.homeContent}>
+          <PostListContainer />
+          <PostFormContainer />
+        </div>
       ) : (
         isLogin === false && (
+          // 未ログインはログインパネル表示
           <div className={styles.loginContent}>
             <LoginPanelContainer />
           </div>
