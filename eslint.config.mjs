@@ -9,7 +9,7 @@ export default [
   {
     ignores: ["node_modules", ".cache", "build", "public/build", ".env"],
   },
-  { languageOptions: { globals: globals.browser } },
+  { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
