@@ -67,7 +67,7 @@ export const PostListContainer = () => {
   };
 
   return (
-    <div className={styles.list}>
+    <div className={styles.list} id="post-list">
       {posts.map((post) => (
         <div key={post.id} className={styles.item}>
           <div className={styles.avatar}>

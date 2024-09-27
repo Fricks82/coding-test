@@ -59,6 +59,7 @@ export const PostFormContainer = () => {
           <div className={styles.form}>
             <div className={styles.textarea}>
               <TextArea
+                id="post-text"
                 value={newPost}
                 onChange={(e) => setNewPost(e.target.value)}
                 placeholder="いまどうしてる？"
@@ -69,6 +70,7 @@ export const PostFormContainer = () => {
               </p>
             </div>
             <Button
+              id="post-button"
               type="button"
               onClick={handlePost}
               label="投稿"

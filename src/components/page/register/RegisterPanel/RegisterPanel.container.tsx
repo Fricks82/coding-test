@@ -98,7 +98,7 @@ export const RegisterPanelContainer = () => {
   return (
     <>
       {isLoading && (
-        <div className={styles.loading}>
+        <div className={styles.loading} id="loading">
           <p>登録中...</p>
         </div>
       )}

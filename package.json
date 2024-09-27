@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --fix 'src/**/*.{js,ts}'",
-    "lint-fix": "eslint --fix './src/**/*.{js,ts}' && prettier --write './src/**/*.{js,ts}'"
+    "lint-fix": "eslint --fix './src/**/*.{js,ts}' && prettier --write './src/**/*.{js,ts}'",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "classnames": "^2.5.1",
@@ -18,6 +19,7 @@
     "react-hook-form": "^7.53.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.47.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
