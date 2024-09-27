@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Coding Test App
 
-## Getting Started
+https://coding-test-tau.vercel.app/
 
-First, run the development server:
+### 環境構築
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```ts
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+環境変数のサンプルが .env.local.example になります。
+新規のFirebaseプロジェクトの値で動作確認可能かと思いますが
+ローカルで動作確認する際に環境変数の値が必要な場合にはご連絡ください。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 動作確認
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```ts
+npm run dev
+```
 
-## Learn More
+### E2Eテスト
 
-To learn more about Next.js, take a look at the following resources:
+```ts
+npm run test:e2e
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### ESLint + Prettier実行
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```ts
+npm run lint-fix
+```
 
-## Deploy on Vercel
+### ディレクトリ構成 (随時更新)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```ts
+.
+├── .vscode
+│   ├── extensions.json   vscodeにインストールするプラグイン
+│   └── settings.json     vscodeの設定ファイル
+├── e2e                   e2eテスト用ディレクトリ
+├── src
+│   ├── app               App Routerのページング用ディレクトリ
+│   ├── conponents        コンポーネント用ディレクトリ
+│   ├── lib               ライブラリを使用する関数用ディレクトリ
+│   └── utils             各種utilsの関数用ディレクトリ
+├── .env.local.example    環境変数のサンプル
+├── .gitignore            Git対象外の設定ファイル
+├── .prettierrcc          prettierの設定ファイル
+├── eslint.config.mjs     eslintの設定ファイル
+├── next-env.d.ts
+├── next.config.mjs       nextjsの設定ファイル
+├── package-lock.json
+├── package.json
+├── playwright.config.ts  e2eテストの設定ファイル
+├── README.md
+└── tsconfig.json         typescriptの設定ファイル
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### TODO
+
+課題の要求を最優先で実装しているため
+実際のアプリとして不足がかなりあります。
+
+- デザインの精度
+- Auth情報やユーザー情報をstoreで管理
+- 新規登録の際のメールアドレスの認証
+- メールアドレス、パスワード以外のユーザー登録手段
+- 登録情報更新用ページ
+- ユーザー名のユニーク化
+- 各コンポーネントをContainerでPresentationalに分割
+- 投稿一覧の遅延読み込み
