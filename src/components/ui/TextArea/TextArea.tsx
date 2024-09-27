@@ -1,3 +1,4 @@
+import React from "react";
 import classNames from "classnames";
 import styles from "./TextArea.module.scss";
 import { forwardRef } from "react";
@@ -21,3 +22,4 @@ export const TextArea = forwardRef<HTMLTextAreaElement, Props>(
     );
   }
 );
+TextArea.displayName = "TextArea";

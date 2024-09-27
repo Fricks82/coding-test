@@ -1,18 +1,17 @@
 "use client";
 
+import React from "react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "@/lib/firebase";
 import { Button } from "../Button";
-import { useRouter } from "next/navigation";
 
 /**
  * 共通ヘッダー用コンポーネント
  */
 export const Header = () => {
-  const router = useRouter();
   /** ログイン状態 */
   const [isLogin, setIsLogin] = useState<boolean | null>(null);
 
@@ -36,7 +35,7 @@ export const Header = () => {
   const handleLogoutClick = async () => {
     try {
       await signOut(auth);
-    } catch (error) {
+    } catch {
       alert("ログアウトに失敗しました。");
     }
   };

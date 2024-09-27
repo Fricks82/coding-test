@@ -17,7 +17,7 @@ export const fetchUserData = async (uid: string) => {
     } else {
       return null;
     }
-  } catch (error) {
+  } catch {
     alert("ユーザーデータ取得に失敗しました。");
   }
 };

@@ -1,5 +1,4 @@
-import classNames from "classnames";
-import styles from "./InputText.module.scss";
+import React from "react";
 import { forwardRef } from "react";
 
 export const RadioButton = forwardRef<
@@ -8,3 +7,4 @@ export const RadioButton = forwardRef<
 >(({ ...inputProps }, ref) => {
   return <input type="radio" ref={ref} {...inputProps} />;
 });
+RadioButton.displayName = "RadioButton";

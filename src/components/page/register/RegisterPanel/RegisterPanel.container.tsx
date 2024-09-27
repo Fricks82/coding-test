@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./RegisterPanel.module.scss";
 import { Button } from "@/components/ui/Button/Button";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -61,7 +62,7 @@ export const RegisterPanelContainer = () => {
    * */
   const handleOnSubmit: SubmitHandler<FormData> = async (data: FormData) => {
     try {
-      //　ローディングを表示
+      // ローディングを表示
       setIsLoading(true);
       // Firebase Authenticationでユーザー登録
       const userCredential = await createUserWithEmailAndPassword(
@@ -88,8 +89,8 @@ export const RegisterPanelContainer = () => {
       });
 
       router.push("/");
-    } catch (error) {
-      //　ローディングを非表示
+    } catch {
+      // ローディングを非表示
       setIsLoading(false);
       alert("ユーザー登録に失敗しました。");
     }
@@ -241,6 +242,7 @@ export const RegisterPanelContainer = () => {
                 <a
                   href="https://luna-matching.notion.site/a714620bbd8740d1ac98f2326fbd0bbc"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   利用規約
                 </a>

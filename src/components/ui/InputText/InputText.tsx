@@ -1,3 +1,4 @@
+import React from "react";
 import classNames from "classnames";
 import styles from "./InputText.module.scss";
 import { forwardRef } from "react";
@@ -21,3 +22,4 @@ export const InputText = forwardRef<HTMLInputElement, Props>(
     );
   }
 );
+InputText.displayName = "InputText";

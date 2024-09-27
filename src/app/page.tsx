@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { auth } from "@/lib/firebase";
 import styles from "./page.module.scss";
 import { onAuthStateChanged } from "firebase/auth";
@@ -18,7 +19,6 @@ const Home = () => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         // ログイン中
-        const uid = user.uid;
         setIsLogin(true);
       } else {
         // 未ログイン

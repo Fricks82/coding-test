@@ -1,3 +1,3 @@
 import { LoginPanelContainer } from "./LoginPanel.container";
 
-export { LoginPanelContainer }
+export { LoginPanelContainer };

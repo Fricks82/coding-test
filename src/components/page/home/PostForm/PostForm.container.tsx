@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import {
   collection,
@@ -46,7 +47,7 @@ export const PostFormContainer = () => {
           createdAt: Timestamp.now(),
         });
         setNewPost("");
-      } catch (error) {
+      } catch {
         alert("投稿に失敗しました。");
       }
     }

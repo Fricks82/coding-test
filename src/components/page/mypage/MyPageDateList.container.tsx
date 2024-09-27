@@ -1,15 +1,13 @@
+import React from "react";
 import { fetchUserData } from "@/utils/auth";
 import { auth } from "@/lib/firebase";
 import { DocumentData } from "firebase/firestore";
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import styles from "./MyPageDateList.module.scss";
 import Image from "next/image";
 
 /** マイページの情報リスト表示用コンポーネント */
 export const MyPageDateList = () => {
-  /** 未ログイン時リダイレクト用のルーター */
-  const router = useRouter();
   /** ログインユーザー情報 */
   const user = auth.currentUser;
   /** ログインユーザーの登録データ */

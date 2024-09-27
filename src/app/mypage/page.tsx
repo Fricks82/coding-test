@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { MyPageDateList } from "@/components/page/mypage";
 import styles from "./mypage.module.scss";
 import Link from "next/link";

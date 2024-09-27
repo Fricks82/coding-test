@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import {
   collection,
@@ -61,7 +62,7 @@ export const PostListContainer = () => {
   const handleDeleteClick = async (id: string) => {
     try {
       await deleteDoc(doc(db, "posts", id));
-    } catch (error) {
+    } catch {
       alert("削除できませんでした。");
     }
   };

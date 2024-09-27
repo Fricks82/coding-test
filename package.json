@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --fix 'src/**/*.{js,ts}'",
-    "lint-fix": "eslint --fix './src/**/*.{js,ts}' && prettier --write './src/**/*.{js,ts}'",
+    "lint": "eslint --fix 'src/**/*.{js,ts,tsx}'",
+    "lint-fix": "eslint --fix './src/**/*.{js,ts,tsx}' && prettier --write './src/**/*.{js,ts,tsx}'",
     "test:e2e": "playwright test"
   },
   "dependencies": {
@@ -19,15 +19,19 @@
     "react-hook-form": "^7.53.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.11.1",
     "@playwright/test": "^1.47.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8",
+    "eslint": "^8.57.1",
     "eslint-config-next": "14.2.13",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.36.1",
+    "globals": "^15.9.0",
     "prettier": "^3.3.3",
     "sass": "^1.79.2",
-    "typescript": "^5"
+    "typescript": "^5",
+    "typescript-eslint": "^8.7.0"
   }
 }

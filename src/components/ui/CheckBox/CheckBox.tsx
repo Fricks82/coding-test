@@ -1,5 +1,4 @@
-import classNames from "classnames";
-import styles from "./InputText.module.scss";
+import React from "react";
 import { forwardRef } from "react";
 
 export const CheckBox = forwardRef<
@@ -8,3 +7,4 @@ export const CheckBox = forwardRef<
 >(({ ...inputProps }, ref) => {
   return <input type="checkbox" ref={ref} {...inputProps} />;
 });
+CheckBox.displayName = "CheckBox";

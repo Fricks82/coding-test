@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { RegisterPanelContainer } from "@/components/page/register/RegisterPanel";
 import styles from "./register.module.scss";
 

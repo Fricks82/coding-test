@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 import styles from "./LoginPanel.module.scss";
 import { Button } from "@/components/ui/Button/Button";
@@ -26,12 +27,7 @@ export const LoginPanelContainer = () => {
   /** ログイン処理 */
   const handleOnSubmit: SubmitHandler<FormData> = async (data: FormData) => {
     try {
-      const userCredential = await signInWithEmailAndPassword(
-        auth,
-        data.email,
-        data.password
-      );
-      const user = userCredential.user;
+      await signInWithEmailAndPassword(auth, data.email, data.password);
     } catch (error) {
       if (error instanceof Error) {
         alert(error.message);
